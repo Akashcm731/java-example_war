@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: app-deploy
+spec:
+  replicas: 4
+  selector:
+    matchLabels:
+      app: java_app
+  template:
+    metadata:
+      name: nginx
+      labels:
+        app: java_app
+    spec:
+      containers:
+      - name: nginx-container
+        image: akashcm/app
+        ports:
+        - containerPort: 80
+        - Port: 80
+        - nodePort: 80
