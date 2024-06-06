@@ -18,5 +18,3 @@ spec:
         image: akashcm/app
         ports:
         - containerPort: 80
-        - Port: 80
-        - nodePort: 80
